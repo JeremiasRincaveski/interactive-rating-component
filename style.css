@@ -1,0 +1,167 @@
+/* adicionando as variaveis e um padrão para a pagina */
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --white-opacity: hsla(0, 0%, 100%, 0.025);
+  --light-gray: hsl(217, 12%, 63%);
+  --medium-gray: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --font-size: 15px;
+  --font-family: "Overpass", sans-serif;
+  --font-weight: 400;
+  --line-height: 1.5;
+  --border-radius: 30px;
+  --transition: 0.3s ease-in-out;
+  --margin-bottom: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  color: var(--white);
+  background-color: var(--very-dark-blue);
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+main {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  background-color: var(--dark-blue);
+}
+
+/* toda parte que recebe dados do usuario */
+
+.input-icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 17px;
+  box-sizing: content-box;
+  padding: 1rem;
+  background-color: var(--white-opacity);
+  border-radius: 50%;
+  margin-bottom:var(--margin-bottom);
+}
+
+.input-title {
+  font-weight: 700;
+  margin-bottom:var(--margin-bottom);
+}
+
+.input-paragraph {
+  margin-bottom:var(--margin-bottom);
+  color: var(--light-gray);
+}
+
+.input-unorderdList {
+  margin-bottom:var(--margin-bottom);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.input-unorderdList li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--white-opacity);
+  color: var(--light-gray);
+}
+
+.input-unorderdList li > button {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--white-opacity);
+  color: var(--light-gray);
+  border: none;
+  transition: var(--transition);
+}
+
+.input-unorderdList li button:hover {
+  background-color: var(--light-gray);
+  color: var(--white);
+}
+
+.input-unorderdList li button:active {
+  background-color: var(--orange);
+}
+
+.input-button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.input-button:hover {
+  background-color: var(--light-gray);
+  color: var(--white);
+}
+
+/* toda parte que mostra os resultados do usuario */
+
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 300px;
+}
+
+.output-result {
+  box-sizing: content-box;
+  padding: .5rem 1.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--white-opacity);
+  color: var(--orange);
+  margin: 1rem 0 1.5rem;
+  font-weight: var(--font-weight);
+}
+
+.output-title {
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.output-paragraph {
+  color: var(--light-gray);
+  font-weight: var(--font-weight);
+}
