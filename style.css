@@ -44,7 +44,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 main {
@@ -115,8 +115,9 @@ main {
   color: var(--white);
 }
 
-.input-unorderdList li button:active {
+#selected, .input-unorderdList li button:active {
   background-color: var(--orange);
+  color: var(--white);
 }
 
 .input-button {
@@ -138,7 +139,7 @@ main {
 /* toda parte que mostra os resultados do usuario */
 
 .output {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
