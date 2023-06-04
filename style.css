@@ -84,6 +84,7 @@ main {
 
 .input-title {
   font-weight: 700;
+  font-size: 2rem;
   margin-bottom: .8rem;
 }
 
@@ -185,4 +186,15 @@ main {
 .output-paragraph {
   color: var(--light-gray);
   font-weight: var(--font-weight);
+}
+
+/* rodape */
+
+.attribution {
+  position: fixed;
+  bottom: 15px;
+}
+
+.attribution a {
+  color: var(--orange);
 }
