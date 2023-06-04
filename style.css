@@ -16,7 +16,7 @@
   --line-height: 1.5;
   --border-radius: 30px;
   --transition: 0.3s ease-in-out;
-  --margin-bottom: 1rem;
+  --margin-bottom: 1.5rem;
 }
 
 * {
@@ -48,11 +48,24 @@ body {
 }
 
 main {
-  width: 100%;
   max-width: 400px;
+  min-width: 360px;
   padding: 2rem;
-  border-radius: var(--border-radius);
-  background-color: var(--dark-blue);
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(215, 22%, 15%),
+    hsl(215, 27%, 12%)
+  );
+  height: 390px;
+}
+
+@media screen and (min-width: 375px) {
+  main {
+    padding: 1.5rem;
+    margin: 1rem;
+    min-width: auto;
+  }
 }
 
 /* toda parte que recebe dados do usuario */
@@ -71,7 +84,7 @@ main {
 
 .input-title {
   font-weight: 700;
-  margin-bottom:var(--margin-bottom);
+  margin-bottom: .8rem;
 }
 
 .input-paragraph {
@@ -111,12 +124,13 @@ main {
 }
 
 .input-unorderdList li button:hover {
-  background-color: var(--light-gray);
+  background-color: var(--orange);
   color: var(--white);
+  cursor: pointer;
 }
 
 #selected, .input-unorderdList li button:active {
-  background-color: var(--orange);
+  background-color: var(--light-gray);
   color: var(--white);
 }
 
@@ -129,11 +143,14 @@ main {
   border: none;
   cursor: pointer;
   transition: var(--transition);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .input-button:hover {
-  background-color: var(--light-gray);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--orange);
 }
 
 /* toda parte que mostra os resultados do usuario */
@@ -144,7 +161,10 @@ main {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  height: 300px;
+}
+
+.output-icon {
+  margin: .5rem;
 }
 
 .output-result {
@@ -153,13 +173,13 @@ main {
   border-radius: var(--border-radius);
   background-color: var(--white-opacity);
   color: var(--orange);
-  margin: 1rem 0 1.5rem;
+  margin: 1rem 0 2rem;
   font-weight: var(--font-weight);
 }
 
 .output-title {
   font-weight: 700;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
 .output-paragraph {
